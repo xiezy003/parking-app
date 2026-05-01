@@ -1,5 +1,5 @@
 // --- PASTE YOUR GOOGLE AI STUDIO API KEY HERE ---
-const API_KEY = "AIzaSyBg-u7YZrnp2g3OOk2FB5lqxXmvs1jMNlk"; 
+const API_KEY = "AIzaSyD_Zq35YuJIuzWJYAEttqzCa1vHRv6qMnY"; 
 // ------------------------------------------------
 
 // Check if you are already parked when you open the app
