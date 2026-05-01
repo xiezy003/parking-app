@@ -1,0 +1,15 @@
+{
+  "name": "My Parking Tracker",
+  "short_name": "ParkTrack",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Blue_P.svg/512px-Blue_P.svg.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
