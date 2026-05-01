@@ -27,8 +27,10 @@ async function saveParking() {
     reader.onloadend = async function() {
         const base64Image = reader.result.split(',')[1]; 
 
-        const promptText = `You are a parking navigation assistant. The user is parked at ${building}. Attached is a photo of their parking pillar/lot. 1. Extract the lot number, level, and any color-coding. 2. Using your knowledge of this building, provide concise, step-by-step directions on how to return to this exact spot from the main ground floor.`;
-
+        const promptText = `You are a parking navigation assistant. The user is parked at ${building}. Attached is a photo of their parking pillar/lot. 
+        1. Extract the lot number, level, and any color/zone marking. 
+        2. Crucially, use your knowledge of ${building}'s specific floor plan to state exactly WHICH lift lobby (e.g., Lobby A, Lobby L) and WHICH major anchor stores (e.g., supermarket, cinema, department store) are closest to this specific zone. 
+        3. Provide concise, step-by-step directions on how to return to this spot from the ground floor, using those specific mall landmarks and lobby names as a guide.`;
         try {
             // Call the Gemini API
             const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`, {
